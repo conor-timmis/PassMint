@@ -1,3 +1,7 @@
+body {
+    background-color: grey;
+}
+
 @keyframes fadeinout {
 
     0%,
