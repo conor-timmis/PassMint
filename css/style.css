@@ -1,0 +1,16 @@
+@keyframes fadeinout {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+#tick {
+    animation: fadeinout 3s linear;
+    color: rgb(31, 230, 31);
+}

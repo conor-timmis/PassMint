@@ -8,3 +8,18 @@ function generate() {
     }
     document.getElementById('password').value = result;
 }
+
+function copyToClipboard() {
+    var passwordText = document.getElementById('password');
+    navigator.clipboard.writeText(passwordText.value)
+        .then(() => {
+            var tick = document.getElementById('tick');
+            tick.style.display = 'inline';
+            setTimeout(() => {
+                tick.style.display = 'none';
+            }, 3000);
+        })
+        .catch(err => {
+            console.error('Could not copy text: ', err);
+        });
+}
