@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Password Generator</title>
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height:100vh">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Password Generator</h5>
+                        <div class="form-group">
+                            <select class="form-control" id="length">
+                                <option>16</option>
+                                <option>32</option>
+                                <option>64</option>
+                                <option>128</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="generate()">Generate</button>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <textarea class="form-control" id="password" rows="3" readonly></textarea>
+                        </div>
+                        <button class="btn btn-secondary" onclick="copyToClipboard()">Copy to Clipboard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<script>generator.js</script>
+<script src="js/generator.js"></script>
 
 </html>
