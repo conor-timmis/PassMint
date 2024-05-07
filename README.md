@@ -19,4 +19,4 @@ PassMint has two main functions currently:
 To generate a password, simply enter the desired length and click the 'Generate' button. Once the password is generated, it can be copied to the clipboard by clicking the 'Copy' button.
 
 ## Future Enhancements
-Stay tuned for future updates where we plan to add more features to enhance the functionality and user experience of PassMint.
+Stay tuned for future updates where I plan to add more features to enhance the functionality and user experience of PassMint.
