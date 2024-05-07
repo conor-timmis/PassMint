@@ -1,16 +1,16 @@
-# Password Generator (Name TBD)
+# PassMint
 
 
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/conor-timmis/Password-Generator)](https://github.com/conor-timmis/Password-Generator/commits/main)
-[![GitHub last commit](https://img.shields.io/github/last-commit/conor-timmis/Password-Generator)](https://github.com/conor-timmis/Password-Generator/commits/main)
-[![GitHub repo size](https://img.shields.io/github/repo-size/conor-timmis/Password-Generator)](https://github.com/conor-timmis/Password-Generator)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/conor-timmis/PassMint)](https://github.com/conor-timmis/PassMint/commits/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/conor-timmis/PassMint)](https://github.com/conor-timmis/PassMint/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/conor-timmis/PassMint)](https://github.com/conor-timmis/PassMint)
 
 
 ## Overview
 This is a simple yet powerful password generator. It allows you to generate a random password with a length of your choice. The generated password includes a mix of uppercase and lowercase letters, numbers, and special characters, ensuring a high level of security.
 
 ## Functionality
-The password generator has two main functions:
+PassMint has two main functions currently:
 
 1. **generate()**: This function generates a random password. The length of the password is determined by the value entered by the user. The password is composed of a mix of uppercase and lowercase letters, numbers, and special characters.
 
@@ -20,4 +20,4 @@ The password generator has two main functions:
 To generate a password, simply enter the desired length and click the 'Generate' button. Once the password is generated, it can be copied to the clipboard by clicking the 'Copy' button.
 
 ## Future Enhancements
-Stay tuned for future updates where we plan to add more features to enhance the functionality and user experience of the password generator.
+Stay tuned for future updates where we plan to add more features to enhance the functionality and user experience of PassMint.
