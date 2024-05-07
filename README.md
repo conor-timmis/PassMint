@@ -1,13 +1,12 @@
 # PassMint
 
-
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/conor-timmis/PassMint)](https://github.com/conor-timmis/PassMint/commits/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/conor-timmis/PassMint)](https://github.com/conor-timmis/PassMint/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/conor-timmis/PassMint)](https://github.com/conor-timmis/PassMint)
 
 
 ## Overview
-This is a simple yet powerful password generator. It allows you to generate a random password with a length of your choice. The generated password includes a mix of uppercase and lowercase letters, numbers, and special characters, ensuring a high level of security.
+This is a simple yet powerful password generator. It allows you to generate a random password with a length of your choice. The generated password includes a mix of uppercase and lowercase letters, numbers, and special characters, ensuring a high level of security. Currently, PassMint can be accessed [here](http://passmint.me/).
 
 ## Functionality
 PassMint has two main functions currently:
