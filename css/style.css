@@ -13,7 +13,34 @@ html {
 }
 
 body {
-    background-color: grey;
+    background-color: #6f4e37;
+}
+
+p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.card {
+    background-color: #77DAAE;
+}
+
+.btn-custom {
+    background-color: #FFFFFF;
+    box-shadow: white;
+}
+
+.btn-custom:hover,
+.btn-custom:active {
+    background-color: #6f4e37;
+    color: white;
+    outline: none;
+}
+
+.btn-custom:focus {
+    box-shadow: none;
 }
 
 @keyframes fadeinout {
@@ -29,6 +56,12 @@ body {
 }
 
 #tick {
-    animation: fadeinout 3s linear;
-    color: rgb(31, 230, 31);
+    animation: fadeinout 2.25s linear;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-custom {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
 }
