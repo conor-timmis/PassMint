@@ -1,13 +1,33 @@
 const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
 
 function generatePassword() {
+    const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const LOWERCASE = 'abcdefghijklmnopqrstuvwxyz';
+    const NUMBERS = '0123456789';
+    const SPECIAL_CHARACTERS = '!@#$%^&*()';
+
+    let characters = '';
+    if (document.getElementById('uppercase').checked) {
+        characters += UPPERCASE;
+    }
+    if (document.getElementById('lowercase').checked) {
+        characters += LOWERCASE;
+    }
+    if (document.getElementById('numbers').checked) {
+        characters += NUMBERS;
+    }
+    if (document.getElementById('special').checked) {
+        characters += SPECIAL_CHARACTERS;
+    }
+
     const length = document.getElementById('length').value;
     let password = '';
     for (let i = 0; i < length; i++) {
-        password += getRandomCharacter();
+        password += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     document.getElementById('password').value = password;
 }
+
 
 function getRandomCharacter() {
     return CHARACTERS.charAt(Math.floor(Math.random() * CHARACTERS.length));
