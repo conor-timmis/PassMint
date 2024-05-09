@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-color: #6f4e37;
+    background-color: #2a3439;
 }
 
 .card {
@@ -27,7 +27,7 @@ body {
 
 .btn-custom:hover,
 .btn-custom:active {
-    background-color: #6f4e37;
+    background-color: #2a3439;
     color: white;
     outline: none;
 }
