@@ -49,7 +49,7 @@ body {
 }
 
 #tick {
-    animation: fadeinout 2.25s linear;
+    animation: fadeinout 2.27s linear;
 }
 
 @media only screen and (max-width: 600px) {

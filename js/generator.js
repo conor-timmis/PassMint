@@ -27,7 +27,7 @@ function displayCopySuccess() {
     tick.style.display = 'inline';
     setTimeout(() => {
         tick.style.display = 'none';
-    }, 3000);
+    }, 2250);
 }
 
 document.getElementById('generateBtn').addEventListener('click', generatePassword);
