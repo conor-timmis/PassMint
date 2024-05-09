@@ -24,7 +24,6 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-center">PassMint</h5>
-                        <br>
                         <p>How many characters would you like to generate?</p>
                         <div class="form-group">
                             <select class="form-control" id="length">
@@ -34,22 +33,19 @@
                                 <option>128</option>
                             </select>
                         </div>
-                        <button class="btn btn-custom" onclick="generate()">Generate</button>
-                        <br>
-                        <br>
+                        <button class="btn btn-custom" id="generateBtn" style="margin-bottom: 2%;">Generate</button>
                         <div class="form-group">
                             <textarea class="form-control" id="password" rows="6" readonly
                                 style="resize: none;"></textarea>
                         </div>
-                        <button class="btn btn-custom" onclick="copyToClipboard()">Copy to Clipboard</button>
+                        <button class="btn btn-custom" id="copyBtn">Copy to Clipboard</button>
                         <i id="tick" class="fas fa-check ml-2" style="display: none; color: #FFFFFF;"></i>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/generator.js"></script>
 </body>
-<script src="js/generator.js"></script>
 
 </html>

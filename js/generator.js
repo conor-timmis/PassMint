@@ -1,25 +1,34 @@
-function generate() {
-    var length = document.getElementById('length').value;
-    var result = '';
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
-    var charactersLength = characters.length;
-    for (var i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+
+function generatePassword() {
+    const length = document.getElementById('length').value;
+    let password = '';
+    for (let i = 0; i < length; i++) {
+        password += getRandomCharacter();
     }
-    document.getElementById('password').value = result;
+    document.getElementById('password').value = password;
 }
 
-function copyToClipboard() {
-    var passwordText = document.getElementById('password');
+function getRandomCharacter() {
+    return CHARACTERS.charAt(Math.floor(Math.random() * CHARACTERS.length));
+}
+
+function copyPasswordToClipboard() {
+    const passwordText = document.getElementById('password');
     navigator.clipboard.writeText(passwordText.value)
-        .then(() => {
-            var tick = document.getElementById('tick');
-            tick.style.display = 'inline';
-            setTimeout(() => {
-                tick.style.display = 'none';
-            }, 3000);
-        })
+        .then(displayCopySuccess)
         .catch(err => {
             console.error('Could not copy text: ', err);
         });
 }
+
+function displayCopySuccess() {
+    const tick = document.getElementById('tick');
+    tick.style.display = 'inline';
+    setTimeout(() => {
+        tick.style.display = 'none';
+    }, 3000);
+}
+
+document.getElementById('generateBtn').addEventListener('click', generatePassword);
+document.getElementById('copyBtn').addEventListener('click', copyPasswordToClipboard);
