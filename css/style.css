@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
 * {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -14,10 +16,22 @@ html {
 
 body {
     background-color: #2a3439;
+    font-size: 18px;
 }
 
 .card {
     background-color: #77DAAE;
+}
+
+.card-title {
+    font-size: 24px;
+    font-family: 'Ubuntu Sans';
+    margin-bottom: 3%;
+}
+
+p {
+    margin-top: 4%;
+    margin-bottom: 1%;
 }
 
 .btn-custom {
@@ -33,7 +47,7 @@ body {
 }
 
 .btn-custom:focus {
-    box-shadow: none;
+    box-shadow: #FFF;
 }
 
 @keyframes fadeinout {
