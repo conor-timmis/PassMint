@@ -23,14 +23,16 @@ function generatePassword() {
     const length = document.getElementById('length').value;
     let password = '';
     for (let i = 0; i < length; i++) {
-        password += characters.charAt(Math.floor(Math.random() * characters.length));
+        password += generateCrypto(characters);
     }
     document.getElementById('password').value = password;
 }
 
-
-function getRandomCharacter() {
-    return CHARACTERS.charAt(Math.floor(Math.random() * CHARACTERS.length));
+function generateCrypto(characters) {
+    const buffer = new Uint32Array(1);
+    window.crypto.getRandomValues(buffer);
+    const randomIndex = buffer[0] % characters.length;
+    return characters.charAt(randomIndex);
 }
 
 function copyPasswordToClipboard() {
