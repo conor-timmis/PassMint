@@ -54,3 +54,17 @@ function displayCopySuccess() {
 
 document.getElementById('generateBtn').addEventListener('click', generatePassword);
 document.getElementById('copyBtn').addEventListener('click', copyPasswordToClipboard);
+
+function stopDragging() {
+    const logo = document.getElementById('logo');
+    if (logo) {
+        logo.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+        logo.style.pointerEvents = 'none';
+    }
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    stopDragging();
+});
