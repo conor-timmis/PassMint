@@ -1,11 +1,16 @@
-const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+// Constants
+const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const LOWERCASE = 'abcdefghijklmnopqrstuvwxyz';
+const NUMBERS = '0123456789';
+const SPECIAL_CHARACTERS = '!@#$%^&*()';
 
+// Event Listeners
+window.addEventListener('DOMContentLoaded', stopDragging);
+document.getElementById('generateBtn').addEventListener('click', generatePassword);
+document.getElementById('copyBtn').addEventListener('click', copyPasswordToClipboard);
+
+// Functions
 function generatePassword() {
-    const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const LOWERCASE = 'abcdefghijklmnopqrstuvwxyz';
-    const NUMBERS = '0123456789';
-    const SPECIAL_CHARACTERS = '!@#$%^&*()';
-
     let characters = '';
     if (document.getElementById('uppercase').checked) {
         characters += UPPERCASE;
@@ -52,9 +57,6 @@ function displayCopySuccess() {
     }, 2250);
 }
 
-document.getElementById('generateBtn').addEventListener('click', generatePassword);
-document.getElementById('copyBtn').addEventListener('click', copyPasswordToClipboard);
-
 function stopDragging() {
     const logo = document.getElementById('logo');
     if (logo) {
@@ -64,7 +66,3 @@ function stopDragging() {
         logo.style.pointerEvents = 'none';
     }
 }
-
-window.addEventListener('DOMContentLoaded', (event) => {
-    stopDragging();
-});
