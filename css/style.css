@@ -12,11 +12,6 @@ html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 body {
@@ -25,14 +20,7 @@ body {
 }
 
 .card {
-    margin-bottom: 50%;
     background-color: #77DAAE;
-}
-
-#logo {
-    width: 20%;
-    height: auto;
-    margin-top: 30%;
 }
 
 .card-title {

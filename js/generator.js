@@ -5,7 +5,6 @@ const NUMBERS = '0123456789';
 const SPECIAL_CHARACTERS = '!@#$%^&*()';
 
 // Event Listeners
-window.addEventListener('DOMContentLoaded', stopDragging);
 document.getElementById('generateBtn').addEventListener('click', generatePassword);
 document.getElementById('copyBtn').addEventListener('click', copyPasswordToClipboard);
 
@@ -55,14 +54,4 @@ function displayCopySuccess() {
     setTimeout(() => {
         tick.style.display = 'none';
     }, 2250);
-}
-
-function stopDragging() {
-    const logo = document.getElementById('logo');
-    if (logo) {
-        logo.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-        logo.style.pointerEvents = 'none';
-    }
 }
