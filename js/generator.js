@@ -1,14 +1,16 @@
-// Constants
+/* Constants for different character sets. */
 const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const LOWERCASE = 'abcdefghijklmnopqrstuvwxyz';
 const NUMBERS = '0123456789';
 const SPECIAL_CHARACTERS = '!@#$%^&*()';
 
-// Event Listeners
+/* Event Listeners for the Generate & Copy buttons to call functions on click */
 document.getElementById('generateBtn').addEventListener('click', generatePassword);
 document.getElementById('copyBtn').addEventListener('click', copyPasswordToClipboard);
 
-// Functions
+/* Generates a password based on the user's preferences, also checks
+ * which character sets the user has selected and 
+ * concatenates them into a string. */
 function generatePassword() {
     let characters = '';
     if (document.getElementById('uppercase').checked) {
@@ -32,6 +34,7 @@ function generatePassword() {
     document.getElementById('password').value = password;
 }
 
+/* Generates a random character from a given string. */
 function generateCrypto(characters) {
     const buffer = new Uint32Array(1);
     window.crypto.getRandomValues(buffer);
@@ -39,6 +42,7 @@ function generateCrypto(characters) {
     return characters.charAt(randomIndex);
 }
 
+/* Copies the value of the element with id 'password' to the clipboard. */
 function copyPasswordToClipboard() {
     const passwordText = document.getElementById('password');
     navigator.clipboard.writeText(passwordText.value)
@@ -48,6 +52,7 @@ function copyPasswordToClipboard() {
         });
 }
 
+/* Displays a tick symbol for a short period of time once copy is clicked. */
 function displayCopySuccess() {
     const tick = document.getElementById('tick');
     tick.style.display = 'inline';
